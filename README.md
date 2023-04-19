@@ -1,11 +1,11 @@
-About mdf-connect-client
-========================
+About mdf-connect-client-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mdf-connect-client-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/materials-data-facility/connect_client
 
 Package license: SGI-B-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mdf-connect-client-feedstock/blob/main/LICENSE.txt)
 
 Summary: Materials Data Facility Connect Client
 
@@ -143,5 +143,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@WardLT](https://github.com/WardLT/)
 * [@jan-janssen](https://github.com/jan-janssen/)
 
