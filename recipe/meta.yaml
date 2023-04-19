@@ -1,5 +1,5 @@
 {% set name = "mdf-connect-client" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdf_connect_client-{{ version }}.tar.gz
-  sha256: ffcd55c6830f998df336750f977dcc129c8b7792356dcdfbe2797e89c6daf012
+  sha256: 66fd012b2ab0aa4f226ce3f917d9c447f596f4c4a0c50cca29966a390e51a630
 
 build:
   noarch: python
