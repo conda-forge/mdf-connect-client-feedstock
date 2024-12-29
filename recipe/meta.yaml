@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - mdf_toolbox >=0.5.0
     - nameparser >=1.0.4
