@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mdf_connect_client-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mdf_connect_client-{{ version }}.tar.gz
   sha256: 67f05a6ee8d42c466067c491ecc364d4c473c15707758ba26c55d548720af1b5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
   run:
     - mdf_toolbox >=0.5.0
     - nameparser >=1.0.4
-    - python >=3.5
+    - python >={{ python_min }}
     - requests >=2.18.4
 
 test:
@@ -31,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/materials-data-facility/connect_client
