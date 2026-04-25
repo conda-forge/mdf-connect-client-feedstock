@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  name: mdf-connect-client
+  version: 0.5.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/mdf_connect_client-${{ version }}.tar.gz
+  sha256: 67f05a6ee8d42c466067c491ecc364d4c473c15707758ba26c55d548720af1b5
+
+build:
+  number: 2
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - mdf_toolbox >=0.5.0
+    - nameparser >=1.0.4
+    - python >=${{ python_min }}
+    - requests >=2.18.4
+
+tests:
+  - python:
+      imports:
+        - mdf_connect_client
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Materials Data Facility Connect Client
+  license: SGI-B-2.0
+  license_file: NOTICE
+  homepage: https://github.com/materials-data-facility/connect_client
+
+extra:
+  recipe-maintainers:
+    - WardLT
+    - jan-janssen
